@@ -2,10 +2,10 @@
 
 echo "lunch flavor: $1"
 
-make clobber
 source build/envsetup.sh
+m clean
 lunch $1
-make -j8
+m
 mmm development/tools/idegen
 development/tools/idegen/idegen.sh
 chmod -R 777 .
